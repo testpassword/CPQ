@@ -90,6 +90,46 @@ type
     Scroll: TScrollBox;
     InfoK: TSpeedButton;
     N2: TMenuItem;
+    Label31: TLabel;
+    EEh: TEdit;
+    Label40: TLabel;
+    WeightEh: TEdit;
+    Label41: TLabel;
+    lightsp: TEdit;
+    Label42: TLabel;
+    Label43: TLabel;
+    Label44: TLabel;
+    Label45: TLabel;
+    Label46: TLabel;
+    Label47: TLabel;
+    Label50: TLabel;
+    SpeedButton1: TSpeedButton;
+    ResultEh: TBitBtn;
+    N3: TMenuItem;
+    e1610191: TMenuItem;
+    c31081: TMenuItem;
+    G6671011221: TMenuItem;
+    Na6022102311: TMenuItem;
+    k13810231: TMenuItem;
+    h662610341: TMenuItem;
+    g9821: TMenuItem;
+    N4: TMenuItem;
+    N10181: TMenuItem;
+    N10151: TMenuItem;
+    N5: TMenuItem;
+    N1091: TMenuItem;
+    N1061: TMenuItem;
+    N1031: TMenuItem;
+    N1021: TMenuItem;
+    N1011: TMenuItem;
+    N1012: TMenuItem;
+    N1022: TMenuItem;
+    N1032: TMenuItem;
+    N1062: TMenuItem;
+    N1092: TMenuItem;
+    N10121: TMenuItem;
+    N10152: TMenuItem;
+    N10182: TMenuItem;
     procedure BackClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure ResultKineClick(Sender: TObject);
@@ -127,6 +167,11 @@ type
       Shift: TShiftState; X, Y: Integer);
     procedure ResultKMouseUp(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
+    procedure lightspChange(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure ResultEhClick(Sender: TObject);
+    procedure WeightEhClick(Sender: TObject);
+    procedure WeightEhKeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
   public
@@ -248,6 +293,11 @@ begin
   Just2.Text := '  2';
 end;
 
+procedure TEnergyForm.lightspChange(Sender: TObject);
+begin
+  gggg.Text := '299792458';
+end;
+
 procedure TEnergyForm.N1Click(Sender: TObject);
 begin
   Form3.Show;
@@ -257,6 +307,12 @@ procedure TEnergyForm.N2Click(Sender: TObject);
 begin
   UnitsForm.Show;
   EnergyForm.Close;
+end;
+
+procedure TEnergyForm.ResultEhClick(Sender: TObject);
+begin
+  m := StrToFloat(WeightEh.Text);
+  EEh.Text := FloatToStr((m * sqr(299792458)) / 1000000);
 end;
 
 procedure TEnergyForm.ResultKineClick(Sender: TObject);
@@ -275,7 +331,7 @@ begin
   s3 := SpeedKine.Text;
   writeln(TF, 'Кинетическая энергия: ', s1, 'кДж=(', s2, 'кг*', s3, '^2м/с)/2');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -290,7 +346,7 @@ begin
   writeln(TF, 'Средняя кинетич. E движения молекул: ', s1, 'кДж=', s2,
     '/2*10^(-23)Дж/кг*', s3, 'К');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -313,7 +369,7 @@ begin
   writeln(TF, 'Потенциальная энергия: ', s1, 'кДж=', s2, 'кг*', s3,
     'Н/кг*', s4, 'м');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -334,7 +390,7 @@ begin
   s3 := Elongation.Text;
   writeln(TF, 'Потенциальная энергия: ', s1, 'кДж=(', s2, 'Н/м*', s3, '^2м)/2');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -352,9 +408,26 @@ begin
   Scroll.VertScrollBar.Position := Scroll.VertScrollBar.Position - WheelDelta;
 end;
 
+procedure TEnergyForm.SpeedButton1Click(Sender: TObject);
+begin
+  MessageBox(handle, PChar('Физическая концепция теории относительности, согласно которой полная энергия физического объекта равна его массе, умноженной на размерный множитель квадрата скорости света в вакууме.'), PChar('Эквивалентность массы и энергии'),
+    MB_ICONINFORMATION + MB_OK);
+end;
+
 procedure TEnergyForm.SpeedKineClick(Sender: TObject);
 begin
   SpeedKine.Clear;
+end;
+
+procedure TEnergyForm.WeightEhClick(Sender: TObject);
+begin
+  WeightEh.Clear;
+end;
+
+procedure TEnergyForm.WeightEhKeyPress(Sender: TObject; var Key: Char);
+begin
+  if not(Key in ['0'..'9', ',', #8]) then
+    Key:=#0
 end;
 
 procedure TEnergyForm.WeightKineClick(Sender: TObject);

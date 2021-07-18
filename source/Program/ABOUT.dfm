@@ -3963,14 +3963,14 @@ object AboutBox: TAboutBox
     Left = 8
     Top = 8
     Width = 281
-    Height = 161
+    Height = 166
     BevelInner = bvRaised
     BevelOuter = bvLowered
     ParentColor = True
     TabOrder = 0
     object ProgramIcon: TImage
       Left = 12
-      Top = 10
+      Top = 8
       Width = 55
       Height = 70
       Picture.Data = {
@@ -5255,11 +5255,11 @@ object AboutBox: TAboutBox
       IsControl = True
     end
     object ProductName: TLabel
-      Left = 70
-      Top = 20
-      Width = 204
+      Left = 100
+      Top = 18
+      Width = 145
       Height = 16
-      Caption = #1050#1072#1083#1100#1082#1091#1083#1103#1090#1086#1088' '#1092#1080#1079#1080#1095#1077#1089#1082#1080#1093' '#1074#1077#1083#1080#1095#1080#1085
+      Caption = #1060#1080#1079#1080#1095#1077#1089#1082#1080#1081' '#1089#1087#1088#1072#1074#1086#1095#1085#1080#1082
       Color = clCream
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWhite
@@ -5272,7 +5272,7 @@ object AboutBox: TAboutBox
     end
     object Copyright: TLabel
       Left = 9
-      Top = 68
+      Top = 65
       Width = 262
       Height = 17
       Caption = #1055#1088#1086#1075#1088#1072#1084#1084#1072' '#1089#1086#1079#1076#1072#1085#1072' '#1050#1091#1083#1100#1073#1072#1082#1086' '#1040#1088#1090#1077#1084#1080#1077#1084', '
@@ -5285,11 +5285,11 @@ object AboutBox: TAboutBox
       IsControl = True
     end
     object Comments: TLabel
-      Left = 75
-      Top = 135
-      Width = 150
-      Height = 32
-      Caption = '29.09.2016 - 13.05.2017'
+      Left = 10
+      Top = 125
+      Width = 263
+      Height = 16
+      Caption = #1055#1077#1088#1080#1086#1076' '#1088#1072#1079#1088#1072#1073#1086#1090#1082#1080': 29.09.2016 - 13.05.2017'
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWhite
       Font.Height = -12
@@ -5301,10 +5301,10 @@ object AboutBox: TAboutBox
     end
     object Label1: TLabel
       Left = 32
-      Top = 83
+      Top = 80
       Width = 215
       Height = 17
-      Caption = #1091#1095#1077#1085#1080#1082#1086#1084' '#1043#1080#1084#1085#1072#1079#1080#1080' '#8470'5 10'#1072' '#1082#1083#1072#1089#1089#1072
+      Caption = #1091#1095#1077#1085#1080#1082#1086#1084' '#1043#1080#1084#1085#1072#1079#1080#1080' '#8470'5 11'#1072' '#1082#1083#1072#1089#1089#1072
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWhite
       Font.Height = -12
@@ -5314,7 +5314,7 @@ object AboutBox: TAboutBox
     end
     object Contact: TLabel
       Left = 35
-      Top = 98
+      Top = 95
       Width = 210
       Height = 17
       Caption = #1074' '#1088#1072#1084#1082#1072#1093' '#1087#1088#1086#1077#1082#1090#1085#1086#1081' '#1076#1077#1103#1090#1077#1083#1100#1085#1086#1089#1090#1080'.'
@@ -5326,11 +5326,11 @@ object AboutBox: TAboutBox
       ParentFont = False
     end
     object Version: TLabel
-      Left = 110
-      Top = 40
-      Width = 121
+      Left = 112
+      Top = 38
+      Width = 114
       Height = 16
-      Caption = ' ver. 1.00 - Final Build'
+      Caption = ' ver. 1.06 - ETU Build'
       Font.Charset = RUSSIAN_CHARSET
       Font.Color = clWhite
       Font.Height = -12
@@ -5341,7 +5341,7 @@ object AboutBox: TAboutBox
     end
     object Label2: TLabel
       Left = 82
-      Top = 113
+      Top = 110
       Width = 123
       Height = 17
       Caption = 'kulbakowork@mail.ru'
@@ -5351,6 +5351,21 @@ object AboutBox: TAboutBox
       Font.Name = 'Century Gothic'
       Font.Style = []
       ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 20
+      Top = 140
+      Width = 269
+      Height = 32
+      Caption = #1055#1077#1088#1080#1086#1076' '#1076#1086#1088#1072#1073#1086#1090#1082#1080': 17.02.2018 - 02.03.18'
+      Font.Charset = RUSSIAN_CHARSET
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Century Gothic'
+      Font.Style = [fsBold]
+      ParentFont = False
+      WordWrap = True
+      IsControl = True
     end
   end
   object OKButton: TButton

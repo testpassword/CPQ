@@ -3,7 +3,6 @@ object Form3: TForm3
   Top = 168
   AlphaBlend = True
   AlphaBlendValue = 248
-  AutoSize = True
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = #1047#1072#1084#1077#1090#1082#1080
   ClientHeight = 561

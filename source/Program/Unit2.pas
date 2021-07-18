@@ -90,6 +90,31 @@ type
     Label15: TLabel;
     Label42: TLabel;
     N2: TMenuItem;
+    N3: TMenuItem;
+    e1610191: TMenuItem;
+    c31081: TMenuItem;
+    G6671011221: TMenuItem;
+    Na6022102311: TMenuItem;
+    k13810231: TMenuItem;
+    h662610341: TMenuItem;
+    g9821: TMenuItem;
+    N4: TMenuItem;
+    N10181: TMenuItem;
+    N10151: TMenuItem;
+    N10121: TMenuItem;
+    N1091: TMenuItem;
+    N1061: TMenuItem;
+    N1031: TMenuItem;
+    N1021: TMenuItem;
+    N1011: TMenuItem;
+    N1012: TMenuItem;
+    N1022: TMenuItem;
+    N1032: TMenuItem;
+    N1062: TMenuItem;
+    N1092: TMenuItem;
+    N10122: TMenuItem;
+    N10152: TMenuItem;
+    N10182: TMenuItem;
     procedure ResultClick(Sender: TObject);
     procedure ImportClick(Sender: TObject);
     procedure ResultAClick(Sender: TObject);
@@ -170,7 +195,7 @@ begin
   s3 := gggg.Text;
   writeln(TF, 'Сила тяжести: ', s1, 'Н=', s2, 'кг*', s3, 'Н/кг');
     MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -197,7 +222,7 @@ begin
   writeln(TF, 'Сила трения: ', s1, 'Н=', s4, '*', s5, 'Н/кг*', s2,
     'кг*', s3, '°');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -244,7 +269,7 @@ begin
   writeln(TF, 'Архимедова Сила: ', s1, 'Н=', s2, 'кг/м^3*', s3, 'м^3*',
     s4, 'Н/кг');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -285,7 +310,7 @@ begin
   s3 := Acceleration.Text;
   writeln(TF, 'II закон Ньютона: ', s1, 'Н=', s2, 'кг*', s3, 'м/с^2');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -314,7 +339,7 @@ begin
   s3 := Elongation.Text;
   writeln(TF, 'Сила упругости: ', s1, 'Н=', s2, 'Н/м*', s3, 'м');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;

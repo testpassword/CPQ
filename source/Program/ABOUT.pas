@@ -19,6 +19,7 @@ type
     Contact: TLabel;
     Version: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
     procedure ProgramIconClick(Sender: TObject);
   private
     { Private declarations }

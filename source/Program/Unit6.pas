@@ -113,6 +113,31 @@ type
     Phantom: TLabel;
     InfoKPD: TSpeedButton;
     N2: TMenuItem;
+    N3: TMenuItem;
+    e1610191: TMenuItem;
+    c31081: TMenuItem;
+    G6671011221: TMenuItem;
+    Na6022102311: TMenuItem;
+    k13810231: TMenuItem;
+    h662610341: TMenuItem;
+    g9821: TMenuItem;
+    N4: TMenuItem;
+    N10181: TMenuItem;
+    N10151: TMenuItem;
+    N10121: TMenuItem;
+    N1091: TMenuItem;
+    N1061: TMenuItem;
+    N1031: TMenuItem;
+    N1021: TMenuItem;
+    N1011: TMenuItem;
+    N1012: TMenuItem;
+    N1022: TMenuItem;
+    N1032: TMenuItem;
+    N1062: TMenuItem;
+    N1092: TMenuItem;
+    N10122: TMenuItem;
+    N10152: TMenuItem;
+    N10182: TMenuItem;
     procedure BackClick(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure ResultAClick(Sender: TObject);
@@ -352,7 +377,7 @@ begin
   writeln(TF, 'Работа электрического тока: ', s1, 'кДж=', s2, 'А*', s3, 'В*',
     s4, 'сек');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -374,7 +399,7 @@ begin
   s4 := Work.Text;
   writeln(TF, 'КПД: ', s4, '=', s1, '/', s2, '*', s3);
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -397,7 +422,7 @@ begin
   writeln(TF, 'Механическая работа: ', s1, 'кДж=', s2, 'кг*', s3,
     'Н/кг*', s4, 'м');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -422,7 +447,7 @@ begin
   s4 := Cosine.Text;
   writeln(TF, 'Механическая работа: ', s1, 'кДж=', s2, 'Н*', s3, 'м*', s4, '°');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -443,7 +468,7 @@ begin
   s3 := TimeNT.Text;
   writeln(TF, 'Механическая работа: ', s1, 'кДж=', s2, 'Вт*', s3, 'сек');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -464,7 +489,7 @@ begin
   s3 := Capacity.Text;
   writeln(TF, 'Работа в тепмодинамике: ', s1, 'кДж=', s2, 'Па*', s3, 'м^3');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;

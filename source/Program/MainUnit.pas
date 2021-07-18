@@ -527,6 +527,31 @@ type
     N81: TMenuItem;
     N91: TMenuItem;
     N101: TMenuItem;
+    N7: TMenuItem;
+    e161: TMenuItem;
+    c31081: TMenuItem;
+    G6671011221: TMenuItem;
+    Na610231: TMenuItem;
+    k13810231: TMenuItem;
+    h66261: TMenuItem;
+    g9821: TMenuItem;
+    N8: TMenuItem;
+    N10181: TMenuItem;
+    N10151: TMenuItem;
+    N10121: TMenuItem;
+    N1091: TMenuItem;
+    N1061: TMenuItem;
+    N1031: TMenuItem;
+    N1021: TMenuItem;
+    N1011: TMenuItem;
+    N1012: TMenuItem;
+    N1022: TMenuItem;
+    N1032: TMenuItem;
+    N1062: TMenuItem;
+    N1092: TMenuItem;
+    N10122: TMenuItem;
+    N10152: TMenuItem;
+    N10182: TMenuItem;
     procedure FBClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure N1Click(Sender: TObject);
@@ -786,7 +811,7 @@ type
 var
   MainForm: TMainForm;
   TF: TextFile;
-  s1, s2, s3, s4, s5, s6: string;
+  s1, s2, s3, s4, s5, s6, succ: string;
   m, d, V, a, k, x, mu, c, t, Y, L, amp, R, U, ti, F, S, pow, h, p, vv,
   vv0, Tk, ii, AA, len, pp, chr, per, freq: real;
   alfa, rad: extended;
@@ -835,7 +860,7 @@ uses Unit2, Unit3, Unit4, Unit5, Unit6, Unit7, ABOUT, Unit8;
 
 procedure TMainForm.TimerTimer(Sender: TObject);
 begin
-  value := value + 1;
+  value := value + 5;
   if value <= 248 then
     AlphaBlendValue := value
   else
@@ -873,6 +898,7 @@ end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
+  succ := 'Уравнение успешно сохранено в файле results.txt в корневой папке с программой.';
   AlphaBlendValue := value;
   assignfile(TF, 'results.txt');
   append(TF);
@@ -1600,7 +1626,7 @@ begin
   writeln(TF, 'Работа электрического тока: ', s1, 'кДж=', s2, 'А*', s3, 'В*',
     s4, 'сек');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -1621,7 +1647,7 @@ begin
   s3 := ChargeAQ.Text;
   writeln(TF, 'Напряжение: ', s1, 'В=', s2, 'А/', s3, 'Кл');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -1648,7 +1674,7 @@ begin
   s3 := TimeD.Text;
   writeln(TF, 'Глубина: ', s1, 'м=(', s2, 'м/с*', s3, 'с)/2');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -1672,7 +1698,7 @@ begin
   writeln(TF, 'Энергия магнитного поля: ', s1, 'кДж=(', s2, 'Гн*', s3,
      '^2А)/2');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -1693,7 +1719,7 @@ begin
   s3 := ChargeET.Text;
   writeln(TF, 'Напряж. эл. поля: ', s1, 'Н/Кл=', s2, 'Н/', s3, 'Кл');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -1712,7 +1738,7 @@ begin
   s2 := PeriodF1.Text;
   writeln(TF, 'Частота: ', s1, 'Гц=1/', s2, 'с');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -1735,7 +1761,7 @@ begin
   writeln(TF, 'Архимедова Сила: ', s1, 'Н=', s2, 'кг/м^3*', s3, 'м^3*',
     s4, 'Н/кг');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -1758,7 +1784,7 @@ begin
   s3 := TimeF.Text;
   writeln(TF, 'Частота: ', s1, 'Гц=', s2, '/', s3, 'с');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -1782,7 +1808,7 @@ begin
   writeln(TF, 'Уравнение скорости: ', s1, 'м/с=', s2, 'м/с+', s3, 'м/с^2*',
     s4, 'c');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -1813,7 +1839,7 @@ begin
   writeln(TF, 'Ускорение: ', s1, 'м/с^2=', s2, '(', s2, 'м/с-', s3, 'м/с)/',
     s4, 'с');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -1828,7 +1854,7 @@ begin
   writeln(TF, 'Скорость равномер. прямолин. движения: ', s1, 'м/с=', s2,
     'м/', s3, 'с');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -1855,7 +1881,7 @@ begin
   writeln(TF, 'Перемещение: ', s1, 'м=', s2, 'м/с*', s3, 'c+((', s4, 'м/с^2*',
     s5, '^2c)/2)');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -1879,7 +1905,7 @@ begin
   writeln(TF, 'Вектор магнитной индукции: ', s1, 'Тл=', s2, 'Н/(', s3,
     'м*', s4, 'А)');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -1900,7 +1926,7 @@ begin
   s3 := Length.Text;
   writeln(TF, 'Момент силы: ', s1, 'Н*м=', s2, 'Н*', s3, 'м');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -1914,7 +1940,7 @@ begin
   s3 := g1.Text;
   writeln(TF, 'Сила тяжести: ', s1, 'Н=', s2, 'кг*', s3, 'Н/кг');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -1935,7 +1961,7 @@ begin
   s3 := TimeN.Text;
   writeln(TF, 'Мощность: ', s1, 'Вт=', s2, 'Дж/', s3, 'сек');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -1956,7 +1982,7 @@ begin
   s3 := CapacityOr.Text;
   writeln(TF, 'Плотность: ', s1, 'кг/м^3=', s2, 'кг/', s3, 'м^3');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -1983,7 +2009,7 @@ begin
   s3 := g4.Text;
   writeln(TF, 'Вес тела: ', s1, 'Н=', s2, 'кг*', s3, 'Н/кг');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -1998,7 +2024,7 @@ begin
   writeln(TF, 'Скорость равномер. прямолин. движения: ', s1, 'м/с=', s2,
     'м/', s3, 'с');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -2021,7 +2047,7 @@ begin
   writeln(TF, 'Давление столба жидкости: ', s1, 'Па=', s2, 'кг/м^3*', s3, 'м*',
     s4, 'Н/кг');
     MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -2047,7 +2073,7 @@ begin
   s2 := PeriodPi.Text;
   writeln(TF, 'Циклическая частота: ', s1, '1/с=(2*Pi)/', s2);
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -2061,7 +2087,7 @@ begin
   s3 := ItineraryP.Text;
   writeln(TF, 'Давление: ', s1, 'Па=', s2, 'Н/', s3, 'м');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -2082,7 +2108,7 @@ begin
   s3 := VoltagePO.Text;
   writeln(TF, 'Мощность тока: ', s1, 'Вт=', s2, 'А*', s3, 'В');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -2103,7 +2129,7 @@ begin
   s3 := SpeedPu.Text;
   writeln(TF, 'Импульс: ', s1, 'Н*с=', s2, 'кг*', s3, 'м/с');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -2124,7 +2150,7 @@ begin
   s3 := TimeQ.Text;
   writeln(TF, 'Сила тока: ', s1, 'А=', s2, 'Кл/', s3, 'сек');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -2148,7 +2174,7 @@ begin
   writeln(TF, 'Теплота проводника: ', s1, 'кДж=', s2, '^2А*', s3, 'Ом*',
     s4, '°C');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -2169,7 +2195,7 @@ begin
   s3 := PeriodS.Text;
   writeln(TF, 'Скорость звука: ', s1, 'м/с=', s2, 'м/', s3, 'с');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -2191,7 +2217,7 @@ begin
   s3 := AmountT1.Text;
   writeln(TF, 'Период: ', s1, 'с=', s2, 'с/', s3);
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -2210,7 +2236,7 @@ begin
   s2 := FrequencyT.Text;
   writeln(TF, 'Период: ', s1, 'с=1/', s2, 'Гц');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -2231,7 +2257,7 @@ begin
   s3 := ResistanceU.Text;
   writeln(TF, 'Сила тока: ', s1, 'А=', s2, 'В/', s3, 'Ом');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
@@ -2407,7 +2433,7 @@ begin
   writeln(TF, 'Перемещение: ', s1, 'м=(', s2, '^2м/с-', s3, '^2м/с)/(2*',
     s4, 'м/с^2)');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
   end;
 end;
@@ -2432,7 +2458,7 @@ begin
   s4 := MagnetLO.Text;
   writeln(TF, 'Сила Лоренца: ', s1, 'Н=', s2, 'Кл*', s3, 'м/с*', s4, 'Тл');
   MessageBox(handle,
-    PChar('Уравнение успешно сохранено в файле results.txt в корневой папке с программой.'),
+    PChar(succ),
     PChar('Успешное сохранение'), MB_ICONWARNING + MB_OK);
 end;
 end;
