@@ -1,0 +1,26 @@
+unit Unit4;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, jpeg, ExtCtrls;
+
+type
+  TSettings = class(TForm)
+    Image1: TImage;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Settings: TSettings;
+
+implementation
+
+{$R *.dfm}
+
+end.
+ 

@@ -1,0 +1,34 @@
+unit Unit3;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, jpeg, ExtCtrls, StdCtrls;
+
+type
+  TForm3 = class(TForm)
+    Image1: TImage;
+    Notes1: TMemo;
+    Import: TButton;
+    procedure ImportClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm3.ImportClick(Sender: TObject);
+begin
+Notes1.Lines.SaveToFile('note.txt');
+end;
+
+end.
+ 

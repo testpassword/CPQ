@@ -1,0 +1,216 @@
+unit Unit2;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, jpeg, ExtCtrls, Buttons;
+
+type
+  TStrenghtForm = class(TForm)
+    Strenght: TEdit;
+    Label1: TLabel;
+    Weight: TEdit;
+    gggg: TEdit;
+    Label2: TLabel;
+    Result: TBitBtn;
+    name: TLabel;
+    Description: TLabel;
+    ci: TLabel;
+    Label6: TImage;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Import: TButton;
+    par: TLabel;
+    Label5: TLabel;
+    Label10: TLabel;
+    Line: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label11: TLabel;
+    StrenghtA: TEdit;
+    Label12: TLabel;
+    Densitas: TEdit;
+    Label13: TLabel;
+    Label14: TLabel;
+    ggggg: TEdit;
+    Label15: TLabel;
+    Label16: TLabel;
+    Capacity: TEdit;
+    Label17: TLabel;
+    ImportA: TButton;
+    Label18: TLabel;
+    BitBtn1: TBitBtn;
+    Label19: TLabel;
+    Label20: TLabel;
+    Strenght2: TEdit;
+    Label21: TLabel;
+    Label22: TLabel;
+    Weight2: TEdit;
+    Label23: TLabel;
+    Label24: TLabel;
+    Acceleration: TEdit;
+    Label25: TLabel;
+    Result2: TBitBtn;
+    Import2: TButton;
+    Label26: TLabel;
+    Label27: TLabel;
+    Label28: TLabel;
+    StrenghtY: TEdit;
+    Hardness: TEdit;
+    Label29: TLabel;
+    Label30: TLabel;
+    Label31: TLabel;
+    Elongation: TEdit;
+    Label32: TLabel;
+    Label33: TLabel;
+    Label34: TLabel;
+    ResultY: TBitBtn;
+    ImportY: TBitBtn;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure ResultClick(Sender: TObject);
+    procedure ImportClick(Sender: TObject);
+    procedure ResultAClick(Sender: TObject);
+    procedure ImportAClick(Sender: TObject);
+    procedure Result2Click(Sender: TObject);
+    procedure Import2Click(Sender: TObject);
+    procedure WeightClick(Sender: TObject);
+    procedure DensitasClick(Sender: TObject);
+    procedure CapacityClick(Sender: TObject);
+    procedure Weight2Click(Sender: TObject);
+    procedure AccelerationClick(Sender: TObject);
+    procedure ResultYClick(Sender: TObject);
+    procedure HardnessClick(Sender: TObject);
+    procedure ElongationClick(Sender: TObject);
+    procedure ggggChange(Sender: TObject);
+    procedure ImportYClick(Sender: TObject);
+    procedure gggggChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  StrenghtForm: TStrenghtForm;
+  m,d,V,a,k,x:real;
+
+implementation
+
+uses Unit1;
+
+{$R *.dfm}
+
+procedure TStrenghtForm.BitBtn1Click(Sender: TObject);
+begin
+StrenghtForm.Close;
+Main.Show;
+end;
+
+procedure TStrenghtForm.ResultClick(Sender: TObject);
+begin
+m:=StrToFloat(Weight.Text);
+Strenght.Text:=FloatToStr(m*g);
+end;
+
+procedure TStrenghtForm.ggggChange(Sender: TObject);
+begin
+gggg.Text:=('9.8');
+end;
+
+procedure TStrenghtForm.ImportClick(Sender: TObject);
+begin
+s1:=Strenght.Text;
+s2:=Weight.Text;
+s3:=gggg.Text;
+writeln(TF,'Сила тяжести: ',s1,'=',s2,'*',s3);
+end;
+
+procedure TStrenghtForm.ResultAClick(Sender: TObject);
+begin
+d:=StrToFloat(Densitas.Text);
+V:=StrToFloat(Capacity.Text);
+StrenghtA.Text:=FloatToStr(d*V*g);
+end;
+
+procedure TStrenghtForm.gggggChange(Sender: TObject);
+begin
+ggggg.Text:=('9.8');
+end;
+
+procedure TStrenghtForm.ImportAClick(Sender: TObject);
+begin
+s1:=StrenghtA.Text;
+s2:=Densitas.Text;
+s3:=Capacity.Text;
+s4:=gggg.Text;
+writeln(TF,'Архимедова Сила: ',s1,'=',s2,'*',s3,'*',s4);
+end;
+
+procedure TStrenghtForm.Result2Click(Sender: TObject);
+begin
+m:=StrToFloat(Weight2.Text);
+a:=StrToFloat(Acceleration.Text);
+Strenght2.Text:=FloatToStr(m*a);
+end;
+
+procedure TStrenghtForm.Import2Click(Sender: TObject);
+begin
+s1:=Strenght2.Text;
+s2:=Weight2.Text;
+s3:=Acceleration.Text;
+writeln(TF,'II закон Ньютона: ',s1,'=',s2,'*',s3);
+end;
+
+procedure TStrenghtForm.ResultYClick(Sender: TObject);
+begin
+k:=StrToFloat(Hardness.Text);
+x:=StrToFloat(Elongation.Text);
+StrenghtY.Text:=FloatToStr(k*x);
+end;
+
+procedure TStrenghtForm.ImportYClick(Sender: TObject);
+begin
+s1:=StrenghtY.Text;
+s2:=Hardness.Text;
+s3:=Elongation.Text;
+writeln(TF, 'Сила упругости: ',s1,'=',s2,'*',s3);
+end;
+
+procedure TStrenghtForm.WeightClick(Sender: TObject);
+begin
+Weight.Clear;
+end;
+
+procedure TStrenghtForm.DensitasClick(Sender: TObject);
+begin
+Densitas.Clear;
+end;
+
+procedure TStrenghtForm.CapacityClick(Sender: TObject);
+begin
+Capacity.Clear;
+end;
+
+procedure TStrenghtForm.Weight2Click(Sender: TObject);
+begin
+Weight2.Clear;
+end;
+
+procedure TStrenghtForm.AccelerationClick(Sender: TObject);
+begin
+Acceleration.Clear;
+end;
+
+procedure TStrenghtForm.HardnessClick(Sender: TObject);
+begin
+Hardness.Clear;
+end;
+
+procedure TStrenghtForm.ElongationClick(Sender: TObject);
+begin
+Elongation.Clear;
+end;
+
+end.

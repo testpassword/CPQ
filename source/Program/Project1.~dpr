@@ -1,0 +1,19 @@
+program Project1;
+
+uses
+  Forms,
+  Unit1 in 'Unit1.pas' {Main},
+  Unit2 in 'Unit2.pas' {StrenghtForm},
+  Unit3 in 'Unit3.pas' {Form3},
+  Unit4 in 'Unit4.pas' {Settings};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TMain, Main);
+  Application.CreateForm(TStrenghtForm, StrenghtForm);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TSettings, Settings);
+  Application.Run;
+end.
